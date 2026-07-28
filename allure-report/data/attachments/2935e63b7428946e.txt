@@ -1,5 +1,0 @@
-Work Order creation failed for Company: Vodafone Group PLC
-Error: locator.waitFor: Timeout 7000ms exceeded.
-Call log:
-  - waiting for locator('#erpContainer').contentFrame().locator('[name=\'mainmenuFrame\']').contentFrame().locator('//span[text()=\'Expenses\']') to be visible
-

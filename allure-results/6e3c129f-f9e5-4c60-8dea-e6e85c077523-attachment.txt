@@ -1,7 +1,0 @@
-Payment creation failed for Company: Vodafone Group PLC
-Error: locator.click: Target page, context or browser has been closed
-Call log:
-  - waiting for locator('#erpContainer').contentFrame().locator('[name=\'mainmenuFrame\']').contentFrame().locator('//span[text()=\'Expenses\']')
-    - waiting for" https://vm-in4qa.in4suite.com/ASPXMVC/Security/Redirect.aspx" navigation to finish...
-    - navigated to "https://vm-in4qa.in4suite.com/ASPXMVC/Security/Redirect.aspx"
-

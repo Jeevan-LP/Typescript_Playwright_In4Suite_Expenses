@@ -1,2 +1,0 @@
-Work Order creation failed for Company: Vodafone Group PLC
-Error: page.waitForTimeout: Target page, context or browser has been closed

@@ -1,5 +1,0 @@
-Payment creation failed for Company: Vodafone Group PLC
-Error: locator.waitFor: Timeout 7000ms exceeded.
-Call log:
-  - waiting for locator('#erpContainer').contentFrame().locator('#slideleft').contentFrame().locator('//table[@class=\'newNavbar\']//a[text()=\'Payments \' and @id=\'defTab\']') to be visible
-

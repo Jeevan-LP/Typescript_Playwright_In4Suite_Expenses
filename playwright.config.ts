@@ -34,8 +34,7 @@ export default defineConfig({
   //maxFailures: 10, // Stop after 5 failures
 
   // Reporters
-  reporter:[['html', {open:'on-failure', outputFolder:'./test-report/html-report/HTML-Report'}], ['dot'],
-            ['allure-playwright', {outputFolder:'./test-report/allure-report/ALLURE-Report'}]],
+  reporter:[['html', {open: 'always', outputFolder: './playwright-report'}], ['dot'],['allure-playwright']],
 
   // Detect accidental test.only
   forbidOnly: !!process.env.CI,    // Prevents test.only in CI
@@ -76,9 +75,9 @@ export default defineConfig({
     launchOptions:{args:["--start-maximized"]}, //Opens Chrome maximized
 
     // Failure analysis
-    screenshot:"on", //Takes screenshot every test
-    video:"on", //Takes video every test
-    trace:"on", //Captures detailed execution history: https://trace.playwright.dev/
+    screenshot:"only-on-failure", //Takes screenshot every test
+    video:"retain-on-failure", //Takes video every test
+    trace:"retain-on-failure", //Captures detailed execution history: https://trace.playwright.dev/
 
     // Timing
     //actionTimeout:15000, //wait for actions like a click, fill etc..
