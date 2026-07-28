@@ -1,0 +1,88 @@
+TYPESCRIPT_PLAYWRIGHT_IN4SUITE_EXPENSES/
+│
+├── .github/
+│   └── workflows/
+│       └── playwright.yml              # CI/CD pipeline execution
+│
+├── tests/                              # Test scenarios
+│   ├── smoke/
+│   │   └── login.spec.ts
+│   │
+│   ├── regression/
+│   │   ├── createExpense.spec.ts
+│   │   └── approveExpense.spec.ts
+│   │
+│   └── e2e/
+│       └── expenseWorkflow.spec.ts
+│
+├── pages/                              # Page Object Model
+│   ├── LoginPage.ts
+│   ├── HomePage.ts
+│   ├── ExpensePage.ts
+│   ├── ApprovalPage.ts
+│   └── ReportsPage.ts
+│
+├── fixtures/                           # Custom Playwright fixtures
+│   ├── baseFixture.ts
+│   ├── pageFixture.ts
+│   ├── userFixture.ts
+│   └── testFixture.ts
+│
+├── test-data/                          # External test data
+│   ├── users.json
+│   ├── expenses.json
+│   └── approvals.json
+│
+├── config/                             # Environment configuration
+│   ├── qa.config.ts
+│   ├── uat.config.ts
+│   └── prod.config.ts
+│
+├── constants/                          # Constant values
+│   ├── urls.ts
+│   ├── messages.ts
+│   └── roles.ts
+│
+├── locators/                           # UI selectors
+│   ├── loginLocators.ts
+│   ├── expenseLocators.ts
+│   └── approvalLocators.ts
+│
+├── utils/                              # Common reusable methods
+│   ├── logger.ts
+│   ├── jsonReader.ts
+│   ├── screenshotUtil.ts
+│   ├── dateUtil.ts
+│   ├── fileUtil.ts
+│   └── excelReader.ts
+│
+├── api/                                # API testing/support
+│   ├── apiClient.ts
+│   └── expenseAPI.ts
+│
+├── auth/                               # Authentication storage
+│   └── user.json
+│
+├── hooks/                              # Before/After execution
+│   ├── setup.ts
+│   └── teardown.ts
+│
+├── test-results/                        # Runtime generated files
+│   ├── screenshots/
+│   ├── videos/
+│   ├── traces/
+│   └── logs/
+│
+├── reports/                            # Test reports
+│   ├── html-report/
+│   └── allure-report/
+│
+├── playwright.config.ts                # Playwright main config
+├── tsconfig.json                       # TypeScript configuration
+├── package.json                        # Dependencies and scripts
+├── package-lock.json
+├── .env                                # Environment variables
+├── .env.qa
+├── .env.prod
+├── .gitignore
+└── README.md                           # Framework documentation

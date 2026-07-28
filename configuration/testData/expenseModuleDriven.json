@@ -1,0 +1,47 @@
+[
+    {
+            "Data Type_01":"Common",
+            "Company": "Vodafone Group PLC",
+            "Expense Type": "Vodafone Expense Type",
+            "Expense Sub Type": "Vodafone Expense With WO - Budget Not Required",
+            "Vendor Name": "Vodafone PLC",
+            "Vendor Branch": "HQ-Hassan-Karnataka (KA)",
+            "Place of Supply": "Karnataka (KA)",
+
+            "Data Type_02":"Work Order",
+            "Work Order Type": "Domestic",
+            "Scope of Work": "Testing and commissioning requirements",
+            "Contact Name": "Jeevan L P",
+            "Item": "Brick",
+            "Item Description": "Brick of construction",
+            "Units": "POUND",
+            "Rate": "123400",
+            "Quantity": "75",
+            "Discount Type": "[Percent]",
+            "Discount Value": "15",
+            "Work Order Description": "Inspect and repair damaged ceiling tiles in the lobby.",
+            "addTax_1": "CGST 6.00%",
+            "Tax Type": "Exclusive",
+            "% Of Work Order Value": "100",
+            "addTax_2": "SGST 6.00%",
+            "Type of Advance": "Percentage",
+            "Advance Percentage(%)": "100",
+            "dedTax": "EXP TDS 10%",
+            "WorkOrder Remarks": "Work Order created",
+            "Terms And Conditions Remarks":"Terms And Conditions Added",
+            "Documents Remarks":"Documents Uploaded",
+
+            "Data Type_03":"Payment",
+            "Amount": "52000",
+            "Invoice Amount": "855200",
+            "Invoice Number": "INV_EXP_PAY_",
+            "Mode Of Payment": "Bank",
+            "SAC/HSN Codes": "HSN_CODE_EXP_",
+            "Payment Remarks": "Payment created",
+            "Payment Documents Remarks":"Documents Uploaded",
+            "Approver Remarks": "Payment yet to paid",
+            "Bank Account": "SBI",
+            "Instrument No": "INST_NO_"
+    }
+]
+

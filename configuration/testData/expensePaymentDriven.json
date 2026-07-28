@@ -1,0 +1,24 @@
+[
+    {
+            "Data Type_01":"Common",
+            "Company": "Vodafone Group PLC",
+            "Expense Type": "Vodafone Expense Type",
+            "Expense Sub Type": "Vodafone Expense With WO - Budget Not Required",
+            "Vendor Name": "Vodafone PLC",
+            "Vendor Branch": "HQ-Hassan-Karnataka (KA)",
+            "Place of Supply": "Karnataka (KA)",
+
+            "Data Type_03":"Payment",
+            "Amount": "52000",
+            "Invoice Amount": "855200",
+            "Invoice Number": "INV_EXP_PAY_",
+            "Mode Of Payment": "Bank",
+            "SAC/HSN Codes": "HSN_CODE_EXP_",
+            "Payment Remarks": "Payment created",
+            "Payment Documents Remarks":"Documents Uploaded",
+            "Approver Remarks": "Payment yet to paid",
+            "Bank Account": "SBI",
+            "Instrument No": "INST_NO_"
+    }
+]
+
