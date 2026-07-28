@@ -1,22 +1,21 @@
-import { test as base, Locator, expect, chromium } from "@playwright/test";
+import { test as base, Locator, expect } from "@playwright/test";
 import { AppDependent } from "../utilities/appDependent.spec";
 import dotenv from "dotenv";
 export { expect };
 
 dotenv.config({path:"./configuration/credentials/loginCredential.env", override:true});
 
-//export let context:BrowserContext;
-//export let page:Page;
 export const test = base;
 
     test.beforeAll("Framework Setup", async()=>{
+
         console.log("========== In4Suite ERP Framework Started ==========");
-        //context=await browser.newContext();
-        //page=await context.newPage();
+
     });
 
         test.beforeEach("Application Setup", async({page})=>{
-            await page.goto(process.env.URL!, {waitUntil:'networkidle'});
+            //await page.goto(process.env.URL!, {waitUntil:'networkidle'}); //directly access from .env file
+            await page.goto('/', {waitUntil:'networkidle'}); //networkidle: Wait until the page has finished loading
             await page.locator("#txtLoginId").fill(process.env.USERNAME!);
             await page.locator("#txtPassword").fill(process.env.PASSWORD!);
             await page.locator("#cmbLogin").click();
@@ -46,11 +45,4 @@ export const test = base;
 
         console.log("========== In4Suite ERP Framework Ended ============")
 
-        // if(page){
-        // await page.close();
-        // }
-
-        // if(context){
-        // await context.close();
-        // }
     });

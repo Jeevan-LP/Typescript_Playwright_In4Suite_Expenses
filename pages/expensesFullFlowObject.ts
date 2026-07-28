@@ -8,7 +8,7 @@ export class ExpensesFullFlow_Object{
     private page:Page;
     private appDep:AppDependent;
     private appIndep:AppIndependent;
-    private waitForTimeout:number=4000;
+    private waitForTimeout:number=5000;
 
     constructor(page:Page){
         this.page = page;
@@ -471,9 +471,9 @@ export class ExpensesFullFlow_Object{
             let WorkOrderList:string | null=null;// due to try and catch block we declared WorkOrderList variable here to access in payment
             try{
                 await this.page.waitForTimeout(this.waitForTimeout);
+/*Expect*/      await expect(await this.getExpenses()).toBeVisible();
                 await this.appIndep.waitAndMenuClick(await this.getExpenses());
                 await this.appIndep.waitAndMenuClick(await this.getWorkOrder());
-/*Expect*/      await expect(await this.WObtnCreate()).toBeVisible();
                 await this.appIndep.waitAndMenuClick(await this.WObtnCreate());
                 await this.appIndep.waitAndSelectOption(await this.getCompanyDD(),(DataDrivenTest.Company));
                 await this.appIndep.waitAndSelectOption(await this.getWorkOrderTypeDD(),(DataDrivenTest["Work Order Type"]));

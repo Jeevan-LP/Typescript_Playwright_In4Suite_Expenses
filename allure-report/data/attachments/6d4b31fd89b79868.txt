@@ -1,0 +1,7 @@
+Payment creation failed for Company: Vodafone Group PLC
+Error: locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+  - waiting for locator('#erpContainer').contentFrame().locator('[name=\'mainmenuFrame\']').contentFrame().locator('//span[text()=\'Expenses\']') to be visible
+    - waiting for" https://vm-in4qa.in4suite.com/In4SuiteGeneric/ClearSession.aspx?Logout=1" navigation to finish...
+    - navigated to "https://vm-in4qa.in4suite.com/In4SuiteGeneric/Login.aspx"
+

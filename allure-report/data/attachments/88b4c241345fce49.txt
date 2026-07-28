@@ -1,0 +1,4 @@
+========== In4Suite ERP Framework Started ==========
+Expenses EXP/WO/COM/Vodafone Group PLC/Vodafone PLC/July/2026-27/558 Work order Approved with INR 88,10,760.00
+Expenses 50154 Payment Paid with INR 46,800.00 from EXP/WO/COM/Vodafone Group PLC/Vodafone PLC/July/2026-27/558 Work Order
+========== In4Suite ERP Framework Ended ============

@@ -12,35 +12,88 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  timeout: 120000000,
-  testDir: './tests',
-  /* Run tests in files in parallel */
-  fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  use: {
-    headless:false,
-    viewport:{height:1080, width:1920},
-    //launchOptions: {args: ['--start-maximized']},
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+  //In4Suite default configuration started--------------------------------
+  // Test location
+  testDir: './tests', // Folder containing test files
+
+  // Timeouts
+  timeout:1200000, // Maximum time allowed for one test
+  //expect:{timeout:6000}, // Maximum wait time for expect()
+
+  //Execute specific tests -grouping
+  //grep:/@WorkOrder/, // Runs only matching tests
+  //grepInvert:/@Payment/, // Skips matching tests
+
+  // Execution
+  fullyParallel:false, // Runs tests sequentially
+  workers:2, // Number of parallel workers
+  retries:0, // Retries failed tests
+
+  // Stop execution
+  //maxFailures: 10, // Stop after 5 failures
+
+  // Reporters
+  reporter:[['html', {open:'on-failure', outputFolder:'./test-report/html-report/HTML-Report'}], ['dot'],
+            ['allure-playwright', {outputFolder:'./test-report/allure-report/ALLURE-Report'}]],
+
+  // Detect accidental test.only
+  forbidOnly: !!process.env.CI,    // Prevents test.only in CI
+  
+  //In4Suite default configuration ended----------------------------------
+  
+  /*timeout: 30000,
+  testDir: './tests',
+  //Run tests in files in parallel
+  fullyParallel: true,
+  //Fail the build on CI if you accidentally left test.only in the source code.
+  forbidOnly: !!process.env.CI,
+  //Retry on CI only
+  retries: process.env.CI ? 2 : 0,
+  //Opt out of parallel tests on CI.
+  workers: process.env.CI ? 1 : undefined,
+  //Reporter to use. See https://playwright.dev/docs/test-reporters
+  reporter: 'html',
+  //Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  
+  use: {
+
+    //In4Suite use configuration started--------------------------------
+    // Development
+    headless:false, //Opens actual browser UI
+
+    // Application URL
+    baseURL:"https://vm-in4qa.in4suite.com/", //Common application URL
+
+    // Desktop application
+    viewport:null, //Removes fixed browser size
+    isMobile:false, //Runs as desktop browser
+    hasTouch:false, //Disables touch events
+
+    // Browser
+    //browserName:"chromium", //Uses Chromium engine
+    colorScheme:'light', //Sets browser preferred theme
+    launchOptions:{args:["--start-maximized"]}, //Opens Chrome maximized
+
+    // Failure analysis
+    screenshot:"on", //Takes screenshot every test
+    video:"on", //Takes video every test
+    trace:"on", //Captures detailed execution history: https://trace.playwright.dev/
+
+    // Timing
+    //actionTimeout:15000, //wait for actions like a click, fill etc..
+    //navigationTimeout:30000, //wait for navigation like a page.goto()
+
+    //In4Suite use configuration ended--------------------------------
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {  //...devices['Desktop Chrome'],
+        browserName: 'chromium',
+       },
     },
 
 /*    {

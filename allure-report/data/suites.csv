@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","158512","Expenses Payment","chromium","2026-07-28","passed","2026-07-28","Expenses Test Cases","expensesTestCase.spec.ts","",""
+"","13562","In4suite Application Login and Logout","chromium","2026-07-28","passed","2026-07-28","","In4SuiteApplication.spec.ts","",""
+"","45055","Expenses Work Order","chromium","2026-07-28","failed","2026-07-28","","expensesTestCase.spec.ts","",""
+"","322633","In4Suite Expenses Full Flow Testcases","chromium","2026-07-28","passed","2026-07-28","","expensesFullFlowTestCase.spec.ts","",""
+"","30406","Expenses Payment","chromium","2026-07-28","failed","2026-07-28","","expensesTestCase.spec.ts","",""
+"","12444","Expenses Work Order","chromium","2026-07-28","failed","2026-07-28","Expenses Test Cases","expensesTestCase.spec.ts","",""

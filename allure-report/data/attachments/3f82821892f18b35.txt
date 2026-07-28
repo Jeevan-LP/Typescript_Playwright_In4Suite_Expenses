@@ -1,0 +1,3 @@
+========== In4Suite ERP Framework Started ==========
+In4suite Application Login and Logout Successfully....
+========== In4Suite ERP Framework Ended ============
