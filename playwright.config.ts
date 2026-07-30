@@ -34,7 +34,7 @@ export default defineConfig({
   //maxFailures: 10, // Stop after 5 failures
 
   // Reporters
-  reporter:[['html', {open: 'always', outputFolder: './playwright-report'}], ['dot'],['allure-playwright']],
+  reporter:[['html', {open: 'on-failure', outputFolder: './playwright-report'}], ['dot'],['allure-playwright']],
 
   // Detect accidental test.only
   forbidOnly: !!process.env.CI,    // Prevents test.only in CI
