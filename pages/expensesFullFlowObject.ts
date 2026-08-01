@@ -607,9 +607,12 @@ export class ExpensesFullFlow_Object{
                 await this.appIndep.waitAndButtonClick(await this.getPaymentGoBtn());
                 await this.appIndep.waitAndFill(await this.getAmountTxtf(), DataDrivenTest.Amount);
                 await this.appIndep.waitAndSelectOption(await this.getPaymentVendorDD(), DataDrivenTest["Vendor Name"]);
-                if(WorkOrderList !==null && await (await this.getPaymentWorkOrderDD()).isVisible() && await (await this.getPaymentWorkOrderDD()).isEnabled()){
+                
+                if(WorkOrderList !==null && await (await this.getPaymentWorkOrderDD()).isVisible() && 
+                (await (await this.appDep.RightFrame()).locator("#ddlWorkOrder option").allInnerTexts()).includes(WorkOrderList)){
                     await this.appIndep.waitAndSelectOption(await this.getPaymentWorkOrderDD(), WorkOrderList);
                 }
+                
                 await this.appIndep.waitAndFill(await this.getInvoiceAmountTxtf(), DataDrivenTest["Invoice Amount"]);
                 await (await this.getInvoiceNumberTxtf()).type(DataDrivenTest["Invoice Number"]+Math.floor(Math.random() * 10000000));
                 await (await this.getInvoiceDatePicker()).click();
